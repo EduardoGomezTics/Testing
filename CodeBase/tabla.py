@@ -1,6 +1,6 @@
 # funcion para generar la tabla
 
-def olapilin(clase,fa_sorted,frecuencia_rel, frecuencia_rel_acum):
+def tabla(clase,fa_sorted,frecuencia_rel, frecuencia_rel_acum):
         
     print('clases','     ','Fa', '              ','Fr', '              ','F acumulada', '     ')
     print('------','     ','-----------','     ','-----------','     ','-----------')
