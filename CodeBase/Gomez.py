@@ -11,11 +11,11 @@ def clases_grouped(datos):
     mrks = []
     
     for i in range(clases_redondear - 1):
-        lim_inf.append(lim_inf[-1] + ancho)
-        lim_sup.append(lim_inf[-2] + ancho)
-        mrks.append((lim_inf[-1] + lim_sup[-1]) / 2)
+        lim_inf.append(round(lim_inf[-1] + ancho, 3))
+        lim_sup.append(round(lim_inf[-2] + ancho, 3))
+        mrks.append(round((lim_inf[-1] + lim_sup[-1]) / 2, 3))
     
     lim_sup.append(max(datos))
-    mrks.append((lim_sup[-1] + lim_inf[-1]) / 2)
+    mrks.append(round((lim_sup[-1] + lim_inf[-1]) / 2, 3))
     
-    return lim_inf, lim_sup, mrks
+    return [round(x, 3) for x in lim_inf], [round(x, 3) for x in lim_sup], [round(x, 3) for x in mrks]
