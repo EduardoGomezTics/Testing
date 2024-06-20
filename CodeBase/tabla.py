@@ -1,11 +1,7 @@
-# funcion para generar la tabla
-
-def tabla(clase,fa_sorted,frecuencia_rel, frecuencia_rel_acum):
+def tabla(clase, fa_sorted, frecuencia_rel, frecuencia_rel_acum):
+    print("{:^10}".format("Clases"), "{:^15}".format("Fa"), "{:^20}".format("Fr"), "{:^20}".format("F acumulada"))
+    print("----------", "---------------", "-------------------", "-------------------")
+    
+    for i in range(len(clase)):
+        print("{:^10}".format(f"Clase {clase[i]}"), "{:^15}".format(fa_sorted[i]), "{:^20.3f}".format(frecuencia_rel[i]), "{:^20.3f}".format(frecuencia_rel_acum[i]))
         
-    print('clases','     ','Fa', '              ','Fr', '              ','F acumulada', '     ')
-    print('------','     ','-----------','     ','-----------','     ','-----------')
-    
-    hola = len(clase)
-    
-    for hola in range(len(clase)):
-        print('Clase', clase[hola], '     ',  fa_sorted[hola], '              ', frecuencia_rel[hola], '   ', frecuencia_rel_acum[hola])        
