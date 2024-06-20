@@ -6,3 +6,4 @@ Trabajo en equipo en base al código de "Frecuencias con funciones" para la mate
 - Diego Antonio Badillo Moralez (230110025)     
 - Karen Pérez Ortiz (230110326)     
 - Adolfo Martinez Acosta (22011221)     
+- Azucena Reyes Garcia (230110874)  
