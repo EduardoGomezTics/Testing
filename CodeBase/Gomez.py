@@ -12,7 +12,7 @@ def clases_grouped(datos):
     
     for i in range(clases_redondear - 1):
         lim_inf.append(lim_inf[-1] + ancho)
-        lim_sup.append(lim_inf[-1] + ancho)
+        lim_sup.append(lim_inf[-2] + ancho)
         mrks.append((lim_inf[-1] + lim_sup[-1]) / 2)
     
     lim_sup.append(max(datos))
