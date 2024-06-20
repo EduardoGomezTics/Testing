@@ -1,7 +1,6 @@
-def tabla_grouped(clase, lim_inf, lim_sup, mrks):
-    print('Clase', '   ', 'Lim Inf', '   ', 'Lim Sup', '   ', 'Marca')
-    print('------', '   ', '---------', '   ', '---------', '   ', '-----')
+def tabla_grouped(clases, lim_inf, lim_sup, mrks):
+    print("{:^10}".format("Clase"), "{:^20}".format("Limite Inferior"), "{:^20}".format("Limite Superior"), "{:^15}".format("Marca de clase"))
+    print("----------", "-------------------", "-------------------", "---------------")
     
-    for i in range(len(clase)):
-        print('Clase', clase[i], ' ', round(lim_inf[i], 3), '   ', round(lim_sup[i], 3), '   ', round(mrks[i], 3))
-
+    for i in range(len(clases)):
+        print("{:^10}".format(f"Clase {clases[i]}"), "{:^20.3f}".format(lim_inf[i]), "{:^20.3f}".format(lim_sup[i]), "{:^15.3f}".format(mrks[i]))
