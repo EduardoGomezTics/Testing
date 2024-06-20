@@ -6,6 +6,7 @@ def clases_grouped(datos):
     clases_redondear = round(clases)-1
     ancho = rango / clases_redondear
     
+    
     lim_inf = [min(datos)]
     lim_sup = []
     mrks = []
@@ -18,4 +19,6 @@ def clases_grouped(datos):
     lim_sup.append(max(datos))
     mrks.append(round((lim_sup[-1] + lim_inf[-1]) / 2, 3))
     
-    return [round(x, 3) for x in lim_inf], [round(x, 3) for x in lim_sup], [round(x, 3) for x in mrks]
+    clases_num = list(range(1, clases_redondear + 1))
+    
+    return clases_num, [round(x, 3) for x in lim_inf], [round(x, 3) for x in lim_sup], [round(x, 3) for x in mrks]
