@@ -1,10 +1,6 @@
 import matplotlib.pyplot as plt
 
-def plot_barras():
-    marcas_clase = [1, 2, 3, 4, 5, 6]
-    frecuencias = [9, 6, 4, 3, 3, 5]
-    marcas_texto = ["Cola", "Cola light", "Limón", "Manzana", "Naranaja", "Toronja"]
-
+def plot_barras(marcas_clase, frecuencias, marcas_texto):
     plt.figure(figsize=(12, 6))
 
     plt.barh(marcas_clase, frecuencias, 
@@ -18,6 +14,3 @@ def plot_barras():
 
     plt.grid()
     plt.show()
-
-
-

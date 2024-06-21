@@ -1,18 +1,26 @@
 import matplotlib.pyplot as plt
 
-def plot_poligono():
-    # Datos corregidos (longitudes iguales)
-    sabores = ["Cola", "Cola light", "Limón", "Manzana", "Naranaja", "Toronja"]
-    frecuencias = [30, 20, 13.33, 10, 10, 16.67]
+def plot_poligono(marcas_clase, fa, fr, sabores):
+    valores_ref_eje = list(range(1, len(marcas_clase) + 1))
+    
+    datos_x_poligono = [0] + valores_ref_eje + [valores_ref_eje[-1] + 1]
+    datos_y_poligono = [0] + fr + [0]
 
-    # Crear gráfico de polígono de frecuencias de barras
-    plt.figure(figsize=(10, 6))  # Tamaño opcional del gráfico
-    plt.plot(sabores, frecuencias, marker='o', linestyle='-', color='b', markersize=8)
-    plt.fill_between(sabores, frecuencias, color='skyblue', alpha=0.3)
-    plt.title('Polígono de Frecuencias')
-    plt.xlabel('Sabores')
-    plt.ylabel('Frecuencia relativa')
-    plt.xticks(rotation=45)  # Rotar etiquetas del eje x para mejor legibilidad
-    plt.grid(True)
+    plt.figure(figsize=(15, 5))
+    plt.plot(datos_x_poligono, datos_y_poligono, 
+             linewidth=3, 
+             color="#1C2833", 
+             linestyle="--", 
+             marker="o", 
+             markersize=10, 
+             markerfacecolor="#EB7AF5", 
+             markeredgecolor="#003DA2",
+             markeredgewidth=1.5) 
+
+    plt.xticks(valores_ref_eje, sabores, fontsize=10)
+    plt.xlabel("Sabores", fontsize=15)
+    plt.ylabel("Frecuencia relativa", fontsize=15)
+    plt.title("Polígono de frecuencias", fontsize=20)
+    plt.grid()
     plt.show()
-
+    

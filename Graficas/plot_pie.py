@@ -1,10 +1,6 @@
 import matplotlib.pyplot as plt
 
-def plot_pie():
-    datos = [30, 20, 13.33, 10, 10, 16.67]
-    marcas_texto = ["Cola", "Cola light", "Limón", "Manzana", "Naranaja", "Toronja"]
-    separaciones = [0, 0, 0, 0, 0, 0]
-
+def plot_pie(datos, marcas_texto, separaciones):
     plt.figure(figsize=(8, 8))  # Opcional: tamaño del gráfico
     plt.pie(datos, 
             explode=separaciones,
@@ -16,6 +12,3 @@ def plot_pie():
             labels=marcas_texto)
     plt.title("Distribución de Sabores", fontsize=20)  # Opcional: título del gráfico
     plt.show()
-
-
-
